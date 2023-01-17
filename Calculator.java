@@ -1,7 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.awt.event.*;
 import java.util.Stack;
 
 public class Calculator extends JFrame {
@@ -97,8 +96,7 @@ public class Calculator extends JFrame {
 
                             String[] parts = input.split("(?<=[+\\-*/])|(?=[+\\-*/])");
                             if (parts.length != 3) {
-                                throw new IllegalArgumentException(
-                                        "Entrée incorrecte, veuillez entrer une opération valide sous la forme : [nombre][opérateur][nombre]");
+                                throw new IllegalArgumentException("Entrée incorrecte, veuillez entrer une opération valide sous la forme : [nombre][opérateur][nombre]");
                             }
                             
                             //La méthode Double.parseDouble() convertit une chaîne de caractères en un nombre décimal.
